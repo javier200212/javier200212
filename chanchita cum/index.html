@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuente personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>¡Feliz Cumpleaños, mi chanchita fernanda (muack) </h1>
+            <p>Que este día esté lleno de alegría y momentos especiales. 🎉🥳</p>
+        </header>
+
+        <section class="countdown">
+            <h2>Cuenta Regresiva:</h2>
+            <div id="countdown-timer">00:00:00</div>
+        </section>
+
+        <section class="gallery">
+            <h2>Momentos Especiales</h2>
+            <div class="photo-grid">
+                <!-- Agrega las rutas de tus imágenes en el atributo 'src' -->
+                <img src="imagenes/1.jpeg" width="300" height="450" alt="Foto 1">
+                <img src="imagenes/2.jpeg" width="300" height="450" alt="Foto 2">
+                <img src="imagenes/3.jpeg" width="300" height="450" alt="Foto 3">
+                <img src="imagenes/4.jpeg" width="300" height="450" alt="Foto 4">
+            </div>
+        </section>
+        
+        </section>
+
+        <section class="messages">
+            <h2>Deja tus Felicitaciones</h2>
+            <form id="message-form">
+                <textarea name="message" placeholder="Solo quisiera decirte todas las veces que has sido importante para ti una ves, mas los recuerdos y cada momento hermoso consigo se celebran estoy contento por ti, estoy orgulloso de ti y espero que cumplas todas las metas que te propongas la vida, te trajo a este mundo a alumbrar el camino de las personas que todos celebren porque hoy tu eres la protagonista una ves mas de esta hermosa historia, te amo y te aprecio todo lo posible, nunca olvides que tu pollito estara aqui para ti cuando quieras, lo haces muy muy feliz te amo mucho chanchita, con esta pagina quisiera dejarte inmortalizado como esque me siento cada vez que hablo contigo o te veo por alguna foto o por videollamada eres especial nunca lo olvides eres la mejor. te amo" rows="4"></textarea>
+            
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>Con mucho cariño, para mi chanchita</p>
+        </footer>
+    </div>
+
+    <!-- Script para la cuenta regresiva -->
+    <script>
+        const countdown = () => {
+            const countDate = new Date('Oct 15, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+
+            const textHour = Math.floor((gap % (day)) / hour);
+            const textMinute = Math.floor((gap % (hour)) / minute);
+            const textSecond = Math.floor((gap % (minute)) / second);
+
+            document.getElementById('countdown-timer').innerText = `${textHour}h ${textMinute}m ${textSecond}s`;
+        };
+
+        setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
